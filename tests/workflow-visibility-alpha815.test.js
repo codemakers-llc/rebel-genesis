@@ -28,8 +28,8 @@ test('bootstrap always exposes creation and review without modifying persisted r
 });
 
 test('request details and evaluation use reusable card layout with mobile fallback',async()=>{
- const engine=await readFile(new URL('../../rebel/dist/request-workflow.js',import.meta.url),'utf8');
- const css=await readFile(new URL('../../rebel/dist/codeview.css',import.meta.url),'utf8');
+ const engine=await readFile(new URL('../node_modules/@code-makers/rebel/dist/request-workflow.js',import.meta.url),'utf8');
+ const css=await readFile(new URL('../node_modules/@code-makers/rebel/dist/codeview.css',import.meta.url),'utf8');
  assert.match(engine,/rebel-request-detail-grid/);
  assert.match(engine,/rebel-review-summary/);
  assert.match(css,/dialog\.proto-dialog\.rebel-request-details/);

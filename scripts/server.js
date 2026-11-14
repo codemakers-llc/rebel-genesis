@@ -1,7 +1,7 @@
 import http from 'node:http';
 import crypto from 'node:crypto';
 import {readFile,writeFile,rename,mkdir,stat} from 'node:fs/promises';
-import {readFileSync} from 'node:fs';
+import {readFileSync,existsSync,copyFileSync} from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const HOME=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -9,6 +9,8 @@ const ROOT=path.join(HOME,'frontend');
 const FEATURES=path.join(ROOT,'features');
 try {for(const line of readFileSync(path.join(HOME,'.env'),'utf8').split(/\r?\n/)){const match=line.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/);if(match&&process.env[match[1]]===undefined)process.env[match[1]]=match[2].trim();}} catch {}
 const DATA=path.join(HOME,'scripts/data/runtime.json');
+// Create writable demo data on first run; never overwrite existing records.
+if (!existsSync(DATA)) copyFileSync(path.join(HOME,'scripts/data/runtime.seed.json'),DATA);
 const VIEWS=path.join(ROOT,'views.json');
 const MODE=(process.env.MODE||'proto').toLowerCase();
 if (!['proto','dev','prod'].includes(MODE)) throw new Error('MODE must be proto, dev, or prod');
@@ -282,4 +284,4 @@ export function createServer(){return http.createServer(async(req,res)=>{try{
  let content;try{content=await readFile(file)}catch{return send(res,404,{error:'File not found'});}
  res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(content);
  }catch(e){send(res,e.status||500,{error:e.status?e.message:'Internal server error'});}});}
-if(process.argv[1]===fileURLToPath(import.meta.url))createServer().listen(PORT,process.env.HOST||'127.0.0.1',()=>console.log(`CODEMAKERS REBEL · Genesis \nLocal: http://localhost:${PORT}\nReady`));
+if(process.argv[1]===fileURLToPath(import.meta.url))createServer().listen(PORT,process.env.HOST||'127.0.0.1',()=>console.log(`CODEMAKERS REBEL · Genesis ${String(MODE).toUpperCase()}\nLocal: http://localhost:${PORT}\nReady`));

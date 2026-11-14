@@ -1,7 +1,8 @@
 // Repairs an accidentally removed/hidden Genesis PROTO request-submission menu entry.
 // Preserves every other menu setting, request, evaluation, and audit record.
-import {readFile,writeFile,rename} from 'node:fs/promises';
+import {readFile,writeFile,rename,copyFile,access} from 'node:fs/promises';
 const file=new URL('./data/runtime.json',import.meta.url);
+try { await access(file); } catch { await copyFile(new URL('./data/runtime.seed.json',import.meta.url),file); }
 const data=JSON.parse(await readFile(file,'utf8'));
 const views=data.views||[];
 if(!views.some(v=>v.route==='/requests'))throw new Error('Registered /requests view not found; repair the view catalog first');

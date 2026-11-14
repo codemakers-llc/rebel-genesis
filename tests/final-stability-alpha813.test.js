@@ -26,7 +26,7 @@ test('Mobile preview uses forced cards independently of desktop media queries',a
  const css=await readFile(new URL('../frontend/app.css',import.meta.url),'utf8');
  assert.match(css,/\.rebel-force-mobile-cards \.admin-table thead\{display:none!important\}/);
  assert.match(css,/\.rebel-force-mobile-cards \.admin-table td::before/);
- const js=await readFile(new URL('../../rebel/dist/view-designer.js',import.meta.url),'utf8');
+ const js=await readFile(new URL('../node_modules/@code-makers/rebel/dist/view-designer.js',import.meta.url),'utf8');
  assert.match(js,/rebel-force-mobile-cards/);
  assert.match(js,/Adjust & Validate JSON/);
 });
