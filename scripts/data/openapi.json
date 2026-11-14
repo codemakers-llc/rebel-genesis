@@ -1,0 +1,423 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "CODEMAKERS REBEL Genesis PROTO API",
+    "version": "0.1.0-alpha.6",
+    "description": "Fictional demonstration. All records and settings are stored in runtime.json."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3100"
+    }
+  ],
+  "paths": {
+    "/api/proto/login": {
+      "post": {
+        "summary": "POST /api/proto/login",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/session": {
+      "get": {
+        "summary": "GET /api/session",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/views": {
+      "get": {
+        "summary": "GET /api/views",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "POST /api/views",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/views/source": {
+      "get": {
+        "summary": "GET /api/views/source",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "PUT /api/views/source",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/dashboard": {
+      "get": {
+        "summary": "GET /api/dashboard",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/telemetry": {
+      "get": {
+        "summary": "GET /api/telemetry",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/requests": {
+      "get": {
+        "summary": "GET /api/requests",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "POST /api/requests",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/requests/{id}": {
+      "get": {
+        "summary": "GET /api/requests/{id}",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "PUT /api/requests/{id}",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      },
+      "delete": {
+        "summary": "DELETE /api/requests/{id}",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/requests/{id}/submit": {
+      "post": {
+        "summary": "POST /api/requests/{id}/submit",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/requests/{id}/review": {
+      "post": {
+        "summary": "POST /api/requests/{id}/review",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/proto/catalogs": {
+      "get": {
+        "summary": "GET /api/proto/catalogs",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "POST /api/proto/catalogs",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/proto/catalogs/{id}": {
+      "get": {
+        "summary": "GET /api/proto/catalogs/{id}",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "PUT /api/proto/catalogs/{id}",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      },
+      "delete": {
+        "summary": "DELETE /api/proto/catalogs/{id}",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/proto/theme": {
+      "get": {
+        "summary": "GET /api/proto/theme",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "PUT /api/proto/theme",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/generated/{collection}": {
+      "get": {
+        "summary": "GET /api/generated/{collection}",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "POST /api/generated/{collection}",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    },
+    "/api/generated/{collection}/{id}": {
+      "get": {
+        "summary": "GET /api/generated/{collection}/{id}",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      },
+      "put": {
+        "summary": "PUT /api/generated/{collection}/{id}",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      },
+      "delete": {
+        "summary": "DELETE /api/generated/{collection}/{id}",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Demo role not authorized"
+          }
+        }
+      }
+    }
+  }
+}
