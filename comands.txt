@@ -1,0 +1,2 @@
+docker build -t genesis . 
+docker run -p 3100:3100 -d genesis
